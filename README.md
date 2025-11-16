@@ -23,7 +23,7 @@ This project helps visualize successful logons, failed logons, and detect brute-
 `screenshots/failed_logons_chart.png`
 
 ### Successful Logons Chart  
-`screenshots\chart.png`
+`screenshots/successful_logons_chart.png`
 
 ### Brute force event 
 `screenshots/Brute_force.png`
