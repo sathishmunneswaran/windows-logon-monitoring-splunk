@@ -20,7 +20,7 @@ This project helps visualize successful logons, failed logons, and detect brute-
 `screenshots/dashboard_overview.png`
 
 ### Failed Logons Chart  
-`screenshots\failed_logons_chart.png`
+`screenshots/failed_logons_chart.png`
 
 ### Successful Logons Chart  
 `screenshots\chart.png`
