@@ -52,8 +52,11 @@ index=* sourcetype=WinEventLog:Security EventCode=4625
 ```
 🛡️ Use Cases
 1.SOC Analyst / Blue Team lab
+
 2.Detect password spraying / brute-force attacks
+
 3.Monitor compromised accounts
+
 4.dows security visibility for training
 
 👨‍💻 Author
