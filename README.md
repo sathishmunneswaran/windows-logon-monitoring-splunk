@@ -17,7 +17,7 @@ This project helps visualize successful logons, failed logons, and detect brute-
 ## 📊 Dashboard Preview
 
 ### Dashboard Overview  
-`dashboard_overview.png`
+`screenshots/dashboard_overview.png`
 
 ### Failed Logons Chart  
 `failed_logons_chart.png`
