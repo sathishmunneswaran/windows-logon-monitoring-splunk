@@ -17,16 +17,16 @@ This project helps visualize successful logons, failed logons, and detect brute-
 ## 📊 Dashboard Preview
 
 ### Dashboard Overview  
-`screenshots\dashboard_overview.png`
+`screenshots/dashboard_overview.png`
 
 ### Failed Logons Chart  
-`screenshots\failed_logons_chart.png`
+`screenshots/failed_logons_chart.png`
 
 ### Successful Logons Chart  
-`screenshort\chart.png`
+`screenshots/chart.png`
 
 ### Brute force event 
-`screenshots\Brute_force.png`
+`screenshots/Brute_force.png`
 
 ---
 
@@ -36,28 +36,28 @@ This project helps visualize successful logons, failed logons, and detect brute-
 ```spl
 index=* sourcetype=WinEventLog:Security EventCode=4625
 | timechart span=1m count
-
+```
+### 🔹 Successful Logons Over Time (4624)
+```spl
 index=* sourcetype=WinEventLog:Security EventCode=4624
 | timechart span=1m count
-
+```
+### 🔥 Brute Force Detection (5+ failures in 2 mins)
+```spl
 index=* sourcetype=WinEventLog:Security EventCode=4625
 | bin _time span=2m
 | stats count by Account_Name, Source_Network_Address, _time
 | where count >= 5
 | sort - count
-
+```
 🛡️ Use Cases
-
-SOC Analyst / Blue Team lab
-
-Detect password spraying / brute-force attacks
-
-Monitor compromised accounts
-
-Windows security visibility for training
+1.SOC Analyst / Blue Team lab
+2.Detect password spraying / brute-force attacks
+3.Monitor compromised accounts
+4.dows security visibility for training
 
 👨‍💻 Author
 
 Sathish
 SOC Analyst | Cybersecurity Enthusiast
-**
+
