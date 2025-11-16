@@ -13,20 +13,20 @@ This project helps visualize successful logons, failed logons, and detect brute-
 ✔️ Lightweight and ideal for SOC, Blue Teams, & Home Labs  
 
 ---
-
 ## 📊 Dashboard Preview
 
 ### Dashboard Overview  
-![Dashboard Overview](screenshots/dashboard_overview.png)
+![Dashboard Overview](Splunk-Windows-Logon-Monitoring/screenshots/dashboard_overview.png)
 
 ### Failed Logons Chart  
-![Failed Logons Chart](screenshots/failed_logons_chart.png)
+![Failed Logons Chart](Splunk-Windows-Logon-Monitoring/screenshots/failed_logons_chart.png)
 
 ### Successful Logons Chart  
-![Successful Logons Chart](screenshots/successful_logons_chart.png)
+![Successful Logons Chart](Splunk-Windows-Logon-Monitoring/screenshots/successful_logons_chart.png)
 
 ### Brute force event  
-![Brute Force Event](screenshots/Brute_force.png)
+![Brute Force Event](Splunk-Windows-Logon-Monitoring/screenshots/Brute_force.png)
+
 
 
 ---
