@@ -61,6 +61,8 @@ index=* sourcetype=WinEventLog:Security EventCode=4625
 
 4.dows security visibility for training
 
+
+
 👨‍💻 Author
 
 Sathish
