@@ -20,13 +20,13 @@ This project helps visualize successful logons, failed logons, and detect brute-
 `screenshots/dashboard_overview.png`
 
 ### Failed Logons Chart  
-`failed_logons_chart.png`
+`screenshots/failed_logons_chart.png`
 
 ### Successful Logons Chart  
-`successful_logons_chart.png`
+`screenshots/successful_logons_chart.png`
 
 ### Brute force event 
-`Brute_force.png`
+`screenshots/Brute_force.png`
 
 ---
 
