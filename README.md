@@ -51,7 +51,7 @@ index=* sourcetype=WinEventLog:Security EventCode=4625
 | where count >= 5
 | sort - count
 ```
-🛡️ Use Cases
+### 🛡️ Use Cases
 
 1.SOC Analyst / Blue Team lab
 
@@ -63,7 +63,7 @@ index=* sourcetype=WinEventLog:Security EventCode=4625
 
 
 
-👨‍💻 Author
+###👨‍💻 Author
 
 Sathish
 SOC Analyst | Cybersecurity Enthusiast
