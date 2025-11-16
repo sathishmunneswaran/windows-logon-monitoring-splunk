@@ -1,3 +1,70 @@
 <dashboard version="1.1">
-    ... your dashboard code ...
+  <label>Windows Logon Monitoring</label>
+
+  <fieldset submitButton="false">
+    <input type="time" token="time_range">
+      <label>Time Range</label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+  </fieldset>
+
+  <!-- FAILED LOGONS -->
+  <row>
+    <panel>
+      <title>Failed Logons Over Time (4625)</title>
+      <chart>
+        <search>
+          <query>
+            index=* sourcetype=WinEventLog:Security EventCode=4625
+            | timechart span=1m count
+          </query>
+          <earliest>$time_range.earliest$</earliest>
+          <latest>$time_range.latest$</latest>
+        </search>
+        <option name="charting.chart">area</option>
+      </chart>
+    </panel>
+  </row>
+
+  <!-- SUCCESSFUL LOGONS -->
+  <row>
+    <panel>
+      <title>Successful Logons Over Time (4624)</title>
+      <chart>
+        <search>
+          <query>
+            index=* sourcetype=WinEventLog:Security EventCode=4624
+            | timechart span=1m count
+          </query>
+          <earliest>$time_range.earliest$</earliest>
+          <latest>$time_range.latest$</latest>
+        </search>
+        <option name="charting.chart">area</option>
+      </chart>
+    </panel>
+  </row>
+
+  <!-- BRUTE FORCE DETECTION -->
+  <row>
+    <panel>
+      <title>Brute Force Attempts (5+ failures in 2 mins)</title>
+      <table>
+        <search>
+          <query>
+            index=* sourcetype=WinEventLog:Security EventCode=4625
+            | bin _time span=2m
+            | stats count by Account_Name, Source_Network_Address, _time
+            | where count >= 5
+            | sort - count
+          </query>
+          <earliest>$time_range.earliest$</earliest>
+          <latest>$time_range.latest$</latest>
+        </search>
+      </table>
+    </panel>
+  </row>
+
 </dashboard>
