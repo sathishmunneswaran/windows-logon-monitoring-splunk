@@ -51,6 +51,7 @@ index=* sourcetype=WinEventLog:Security EventCode=4625
 | sort - count
 ```
 🛡️ Use Cases
+
 1.SOC Analyst / Blue Team lab
 
 2.Detect password spraying / brute-force attacks
