@@ -17,15 +17,15 @@ This dashboard visualizes successful logons, failed logons, and brute-force atta
 ## 📊 Dashboard Preview
 
 ### Dashboard Overview
-`C:\Users\ssath\OneDrive\Documents\Splunk-Windows-Logon-Monitoring\screenshots\dashboard_overview.png`
+`screenshot\dashboard_overview.png`
 ### Failed Logons Chart
-`C:\Users\ssath\OneDrive\Documents\Splunk-Windows-Logon-Monitoring\screenshots\failed_logons_chart.png`
+`screenshot\failed_logons_chart.png`
 
 ### Successful Logons Chart
-`C:\Users\ssath\OneDrive\Documents\Splunk-Windows-Logon-Monitoring\screenshots\successful_logons_chart.png`
+`screenshots\successful_logons_chart.png`
 
 ### Brute force chart
-`C:\Users\ssath\OneDrive\Documents\Splunk-Windows-Logon-Monitoring\screenshots\Brute force.png`
+`screenshots\Brute_force.png`
 
 ---
 
@@ -49,19 +49,6 @@ index=* sourcetype=WinEventLog:Security EventCode=4625
 | where count >= 5
 | sort - count
 
-📁 Repository Structure
-SPLUNK-WINDOWS-LOGON-MONITORING/
-│
-├── dashboard.xml
-├── README.md
-├── SPL_queries.txt
-│
-└── screenshots/
-       ├── dashboard_overview.png
-       ├── failed_logons_chart.png
-       ├── successful_logons_chart.png
-       └── raw_failed_logon_event.png
-
 🚀 Requirements
 1.Splunk Enterprise or Splunk Free
 
@@ -83,4 +70,5 @@ SPLUNK-WINDOWS-LOGON-MONITORING/
 
 Sathish
 SOC Analyst | Cybersecurity Enthusiast
+
 
