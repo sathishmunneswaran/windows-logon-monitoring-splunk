@@ -17,16 +17,16 @@ This project helps visualize successful logons, failed logons, and detect brute-
 ## 📊 Dashboard Preview
 
 ### Dashboard Overview  
-`screenshots/dashboard_overview.png`
+`screenshots\dashboard_overview.png`
 
 ### Failed Logons Chart  
-`screenshots/failed_logons_chart.png`
+`screenshots\failed_logons_chart.png`
 
 ### Successful Logons Chart  
-`screenshots/successful_logons_chart.png`
+`screenshort\chart.png`
 
-### Raw Failed Logon Event  
-`screenshots/raw_failed_logon_event.png`
+### Brute force event 
+`screenshots\Brute_force.png`
 
 ---
 
@@ -36,57 +36,18 @@ This project helps visualize successful logons, failed logons, and detect brute-
 ```spl
 index=* sourcetype=WinEventLog:Security EventCode=4625
 | timechart span=1m count
-🔹 Successful Logons Over Time (4624)
-spl
-Copy code
+
 index=* sourcetype=WinEventLog:Security EventCode=4624
 | timechart span=1m count
-🔥 Brute Force Detection (5+ failures in 2 mins)
-spl
-Copy code
+
 index=* sourcetype=WinEventLog:Security EventCode=4625
 | bin _time span=2m
 | stats count by Account_Name, Source_Network_Address, _time
 | where count >= 5
 | sort - count
-📥 Importing the Dashboard into Splunk
-Open Splunk → Search & Reporting
 
-Go to Dashboards
-
-Click Create New Dashboard
-
-Choose Source mode
-
-Paste all content from dashboard.xml
-
-Save → Dashboard loads immediately ✔️
-
-📁 Repository Structure
-markdown
-Copy code
-windows-logon-monitoring-splunk/
-│
-├── dashboard.xml
-├── README.md
-├── SPL_queries.txt
-│
-└── screenshots/
-       ├── dashboard_overview.png
-       ├── failed_logons_chart.png
-       ├── successful_logons_chart.png
-       └── raw_failed_logon_event.png
-🚀 Requirements
-Splunk Enterprise or Splunk Free
-
-Windows Security Event Logs enabled
-
-Input configured:
-
-ruby
-Copy code
-WinEventLog://Security
 🛡️ Use Cases
+
 SOC Analyst / Blue Team lab
 
 Detect password spraying / brute-force attacks
@@ -96,6 +57,7 @@ Monitor compromised accounts
 Windows security visibility for training
 
 👨‍💻 Author
+
 Sathish
 SOC Analyst | Cybersecurity Enthusiast
-
+**
