@@ -28,6 +28,7 @@ This project helps visualize successful logons, failed logons, and detect brute-
 ### Brute force event  
 ![Brute Force Event](screenshots/Brute_force.png)
 
+
 ---
 
 ## 🧠 SPL Queries
