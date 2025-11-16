@@ -1,0 +1,29 @@
+========================================================
+ SPL QUERIES FOR WINDOWS LOGON MONITORING DASHBOARD
+========================================================
+
+
+1) FAILED LOGONS OVER TIME (4625)
+----------------------------------
+index=* sourcetype=WinEventLog:Security EventCode=4625
+| timechart span=1m count
+
+
+2) SUCCESSFUL LOGONS OVER TIME (4624)
+--------------------------------------
+index=* sourcetype=WinEventLog:Security EventCode=4624
+| timechart span=1m count
+
+
+3) BRUTE FORCE ATTEMPTS (5+ failures in 2 mins)
+------------------------------------------------
+index=* sourcetype=WinEventLog:Security EventCode=4625
+| bin _time span=2m
+| stats count by Account_Name, Source_Network_Address, _time
+| where count >= 5
+| sort - count
+
+
+========================================================
+ END OF FILE
+========================================================
