@@ -26,7 +26,7 @@ This project helps visualize successful logons, failed logons, and detect brute-
 `screenshots\chart.png`
 
 ### Brute force event 
-`screensho\Brute_force.png`
+`screenshots/Brute_force.png`
 
 ---
 
