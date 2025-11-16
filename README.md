@@ -17,16 +17,16 @@ This project helps visualize successful logons, failed logons, and detect brute-
 ## 📊 Dashboard Preview
 
 ### Dashboard Overview  
-`screenshots/dashboard_overview.png`
+`dashboard_overview.png`
 
 ### Failed Logons Chart  
-`screenshots/failed_logons_chart.png`
+`failed_logons_chart.png`
 
 ### Successful Logons Chart  
-`screenshots/successful_logons_chart.png`
+`successful_logons_chart.png`
 
 ### Brute force event 
-`screenshots/Brute_force.png`
+`Brute_force.png`
 
 ---
 
